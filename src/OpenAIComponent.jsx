@@ -11,7 +11,7 @@ const OpenAIComponent = () => {
   };
 
   const handleButtonClick = async () => {
-    const response = await fetch('https://tutoring-serverless-joel-buchholz.vercel.app/api/ser', {
+    const response = await fetch('https://serverless-gpt-db.vercel.app/api/ser', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -23,7 +23,7 @@ const OpenAIComponent = () => {
   };
 
   const handleButtonClick2 = async () => {
-    const response = await fetch('https://tutoring-serverless-joel-buchholz.vercel.app/api/ser', {
+    const response = await fetch('https://serverless-gpt-db.vercel.app/api/ser', {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -41,7 +41,7 @@ const OpenAIComponent = () => {
   };
 
   const handleButtonClick3 = async () => {
-    const response = await fetch('https://tutoring-serverless-joel-buchholz.vercel.app/api/ser', {
+    const response = await fetch('https://serverless-gpt-db.vercel.app/api/ser', {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',

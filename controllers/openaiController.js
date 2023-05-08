@@ -1,7 +1,7 @@
 import OpenAI from 'openai-api';
 import model from '../model/model.js';
 
-const openai = new OpenAI('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');
+const openai = new OpenAI('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');
 
 const openaiController = async (req, res) => {
   const { inputText } = req.body;
