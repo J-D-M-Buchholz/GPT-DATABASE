@@ -34,7 +34,7 @@ const OpenAIComponent = () => {
     setResponseText2(
       data.map((item) => (
         <p>
-          Frage: {item.Test.Frage} <br /> Antwort: {item.Test.Antwort}
+          Frage: {item.Text.Frage} <br /> Antwort: {item.Text.Antwort}
         </p>
       ))
     );

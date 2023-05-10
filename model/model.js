@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
 const fAS = new mongoose.Schema({
-    Test: {
+    Text: {
         type: Object,
     }
 })

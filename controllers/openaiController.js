@@ -20,7 +20,7 @@ const openaiController = async (req, res) => {
   res.json({ responseText: answer });
 
   try {
-    const newModel = new model({Test: { Frage: inputText, Antwort: answer }})
+    const newModel = new model({Text: { Frage: inputText, Antwort: answer }})
     await newModel.save();
   } catch (error) {
     console.log(error);
