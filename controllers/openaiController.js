@@ -1,7 +1,10 @@
 import OpenAI from 'openai-api';
 import model from '../model/model.js';
+import dotenv from 'dotenv';
 
-const openai = new OpenAI('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');
+dotenv.config();
+
+const openai = new OpenAI(process.env.API);
 
 const openaiController = async (req, res) => {
   const { inputText } = req.body;
