@@ -1,6 +1,6 @@
-import OpenAI from 'openai-api';
-import model from '../model/model.js';
-import dotenv from 'dotenv';
+import OpenAI from "openai-api";
+import model from "../model/model.js";
+import dotenv from "dotenv";
 
 dotenv.config();
 
@@ -9,7 +9,7 @@ const openai = new OpenAI(process.env.API);
 const openaiController = async (req, res) => {
   const { inputText } = req.body;
   const response = await openai.complete({
-    engine: 'text-davinci-003',
+    engine: "text-davinci-003",
     prompt: inputText,
     maxTokens: 150,
     temperature: 0,
@@ -20,7 +20,7 @@ const openaiController = async (req, res) => {
   res.json({ responseText: answer });
 
   try {
-    const newModel = new model({Text: { Frage: inputText, Antwort: answer }})
+    const newModel = new model({ Text: { Frage: inputText, Antwort: answer } });
     await newModel.save();
   } catch (error) {
     console.log(error);
